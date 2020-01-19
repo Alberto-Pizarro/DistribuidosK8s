@@ -1,0 +1,4 @@
+com/kubernetes/apps/AppKubernetes.class
+com/kubernetes/app/modelo/PrimosModelo.class
+com/kubernetes/app/modelo/NumeroModelo.class
+com/kubernetes/app/CalculoController.class
