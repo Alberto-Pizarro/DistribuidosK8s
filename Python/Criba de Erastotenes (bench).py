@@ -15,34 +15,30 @@ def analyse_sentiment():
     )
 '''
 
-# Python program to print all primes smaller than or equal to
-# n using Sieve of Eratosthenes
+# Progrma en python que calcula todos los primos menores a N
+# Basado en la Criba de Erastótenes
+# Entrega cuantos primos encontró y cuanto se demoró en ello
 @app.route("/analyse/sentiment", methods=['POST'])
 def SieveOfEratosthenes():
     n = int(request.get_json()['sentence'])
     t1=time.time()
-    # Create a boolean array "prime[0..n]" and initialize
-    # all entries it as true. A value in prime[i] will
-    # finally be false if i is Not a prime, else true.
+    # Array booleano de tamaño "prime[0..n]" inicializado como True
     prime = [True for i in range(n + 1)]
-    primos = []
+    primos = 0
     p = 2
     while (p * p <= n):
-
-        # If prime[p] is not changed, then it is a prime
-        if (prime[p] == True):
-
-            # Update all multiples of p
+        # Si es un número primo, eliminamos todos sus múltiplos
+        if prime[p]:
+            # Contabilizamos el primo encontrado
+            primos+=1
+            # Actualizamos todos los múltiplos que tiene
             for i in range(p * 2, n + 1, p):
                 prime[i] = False
+            
         p += 1
     prime[0] = False
     prime[1] = False
-    # Print all prime numbers
-    for p in range(n + 1):
-        if prime[p]:
-            primos.append(p)
-
+    # Calculamos el tiempo utilizado para esto
     tiempo=t1-time.time()
 
     return jsonify(
