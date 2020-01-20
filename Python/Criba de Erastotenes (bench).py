@@ -38,7 +38,7 @@ def SieveOfEratosthenes():
     prime[1] = False
 
     for i in prime:
-        if (prime):
+        if (i):
             primos+=1
     # Calculamos el tiempo utilizado para esto
     tiempo=t1-time.time()
