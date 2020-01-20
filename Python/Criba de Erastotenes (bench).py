@@ -29,8 +29,6 @@ def SieveOfEratosthenes():
     while (p * p <= n):
         # Si es un número primo, eliminamos todos sus múltiplos
         if prime[p]:
-            # Contabilizamos el primo encontrado
-            primos+=1
             # Actualizamos todos los múltiplos que tiene
             for i in range(p * 2, n + 1, p):
                 prime[i] = False
@@ -38,6 +36,10 @@ def SieveOfEratosthenes():
         p += 1
     prime[0] = False
     prime[1] = False
+
+    for i in prime:
+        if (prime):
+            primos+=1
     # Calculamos el tiempo utilizado para esto
     tiempo=t1-time.time()
 
