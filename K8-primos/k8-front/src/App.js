@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
-import Polarity from "./components/Polarity";
+import Display from "./components/Display";
 
 const style = {
     marginLeft: 12,
@@ -39,14 +39,14 @@ class App extends Component {
 
     render() {
         const tiempoComponent = this.state.tiempo !== undefined ?
-            <Polarity lista={this.state.lista} tiempo={this.state.tiempo}/> :
+            <Display lista={this.state.lista} tiempo={this.state.tiempo}/> :
             null;
 
         return (
             <MuiThemeProvider>
                 <div className="centerize">
                     <Paper zDepth={1} className="content">
-                        <h2>Calculo de primos</h2>
+                        <h2>Cálculo de la cantidad de números primos</h2>
                         <TextField ref={ref => this.textField = ref} onKeyUp={this.onEnterPress.bind(this)}
                                    hintText="Escriba un valor N."/>
                         <RaisedButton  label="Calcular" style={style} onClick={this.obtenerLista.bind(this)}/>

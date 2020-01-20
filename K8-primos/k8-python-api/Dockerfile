@@ -1,8 +1,8 @@
 FROM python:3.6.6-alpine
-COPY sa /app
+COPY k8 /app
 WORKDIR /app
-RUN pip3 install -r requirements.txt && \
+RUN pip3 install -r dependencias.txt && \
     python3 -m textblob.download_corpora
 EXPOSE 5000
 ENTRYPOINT ["python3"]
-CMD ["sentiment_analysis.py"]
+CMD ["primos_bench.py"]
