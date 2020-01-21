@@ -77,4 +77,14 @@ Como se puede ver, el funcionamiento de la plataforma es bastante rápido por lo
 
 7. **Link de acceso a versión productiva del Software**
 
+TO-DO
+
 8. **Pasos para desplegar desde cero**
+
+Para desplegar localmente las imágenes se deben contar con Docker instalado y ejecutar los siguientes comandos:
+
+* **Para desplegar el código de Python:** `docker run -d -p 5050:5000 remnant12/kubernetes-distribuidos-python-api-bench`
+
+* **Para desplegar lo que es Backend:** `docker run -d -p 8080:8080 -e K8_PYTHON_API_URL='http://<IP del container anterior>:5000' remnant12/kubernetes-distribuidos-back` 
+
+* **Para desplegar lo que es Frontend** `docker run -d -p 80:80 remnant12/kubernetes-distribuidos-front`
