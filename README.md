@@ -97,9 +97,17 @@ La versión productiva del software se puede encontrar haciendo click en el sigu
 
 Para desplegar localmente las imágenes se deben contar con Docker instalado y ejecutar los siguientes comandos:
 
-* **Para desplegar el código de Python:** `docker run -d -p 5050:5000 remnant12/kubernetes-distribuidos-python-api-bench`
+* **Para desplegar el código de Python:** `docker run -d -p 5050:5000 remnant12/kubernetes-dist-api-bench-final`
 
-* **Para desplegar lo que es Backend:** `docker run -d -p 8080:8080 -e K8_PYTHON_API_URL='http://<IP del container anterior>:5000' remnant12/kubernetes-distribuidos-back` 
+* **Para desplegar lo que es Backend:** `docker run -d -p 8080:8080 -e K8_PYTHON_API_URL='http://<IP del container anterior>:5000' remnant12/kubernetes-dist-back-final` 
 
-* **Para desplegar lo que es Frontend** `docker run -d -p 80:80 remnant12/kubernetes-distribuidos-front`
+* **Para desplegar lo que es Frontend** `docker run -d -p 80:80 remnant12/kubernetes-dist-front-final-2`
 
+
+Las imágenes en el repositorio de Google se encuentran en las siguientes direcciones:
+
+* [Código en Python](gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-api-bench-final)
+
+* [Back-End](gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-back-final)
+
+* [Front-End](gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-front-final-2)
