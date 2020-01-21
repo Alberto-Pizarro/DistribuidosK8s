@@ -20,7 +20,7 @@ class App extends Component {
     };
 
     obtenerLista() {
-        fetch('http://localhost:8080/sentiment', {
+        fetch('http://34.95.243.180:80/criba', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

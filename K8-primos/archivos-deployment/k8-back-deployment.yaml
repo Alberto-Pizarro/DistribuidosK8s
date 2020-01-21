@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sa-web-app
+  name: k8-back
   labels:
-    app: sa-web-app
+    app: k8-back
 spec:
   selector:
     matchLabels:
-      app: sa-web-app
+      app: k8-back
   replicas: 2
   minReadySeconds: 15
   strategy:
     type: RollingUpdate
-    rollingUpdate: 
+    rollingUpdate:
       maxUnavailable: 1
-      maxSurge: 1 
+      maxSurge: 1
   template:
     metadata:
       labels:
-        app: sa-web-app
+        app: k8-back
     spec:
       containers:
-      - image: rinormaloku/sentiment-analysis-web-app
+      - image: gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-back-final
         imagePullPolicy: Always
-        name: sa-web-app
+        name: k8-back
         env:
-          - name: SA_LOGIC_API_URL
-            value: "http://sa-logic"
+          - name: K8_PYTHON_API_URL
+            value: "http://k8-python-api"
         ports:
           - containerPort: 8080

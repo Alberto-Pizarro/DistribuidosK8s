@@ -5,7 +5,7 @@ import time
 app = Flask(__name__)
 
 
-@app.route("/analyse/sentiment", methods=['POST'])
+@app.route("/calculo/criba", methods=['POST'])
 def obtener_lista():
     lista = request.get_json()['lista']
 

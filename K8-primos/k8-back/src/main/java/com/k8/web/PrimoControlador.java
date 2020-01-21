@@ -13,16 +13,16 @@ public class PrimoControlador {
     @Value("${k8.python.api.url}")
     private String apiURL;
 
-    @PostMapping("/sentiment")
+    @PostMapping("/criba")
     public ListaModelo obtenerLista(@RequestBody PrimoModelo primoModelo) {
         RestTemplate restTemplate = new RestTemplate();
 
-        return restTemplate.postForEntity(apiURL + "/analyse/sentiment",
+        return restTemplate.postForEntity(apiURL + "/calculo/criba",
                 primoModelo, ListaModelo.class)
                 .getBody();
     }
 
-    @GetMapping("/testHealth")
-    public void testHealth() {
+    @GetMapping("/prueba")
+    public void prueba() {
     }
 }

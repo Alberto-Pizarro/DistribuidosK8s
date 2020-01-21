@@ -1,29 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sa-frontend
+  name: k8-front
   labels:
-    app: sa-frontend 
+    app: k8-front
 spec:
   selector:
     matchLabels:
-      app:  sa-frontend
-    
+      app: k8-front
   replicas: 2
   minReadySeconds: 15
   strategy:
     type: RollingUpdate
-    rollingUpdate: 
+    rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1
   template:
     metadata:
       labels:
-        app: sa-frontend
+        app: k8-front
     spec:
       containers:
-        - image: rinormaloku/sentiment-analysis-frontend:green
+        - image: gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-front-final-2:v2
           imagePullPolicy: Always
-          name: sa-frontend
+          name: k8-front
           ports:
             - containerPort: 80

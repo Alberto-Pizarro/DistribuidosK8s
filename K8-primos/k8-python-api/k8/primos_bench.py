@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Progrma en python que calcula todos los primos menores a N
 # Basado en la Criba de Erastotenes
 # Entrega cuantos primos encontro y cuanto se demoro en ello
-@app.route("/analyse/sentiment", methods=['POST'])
+@app.route("/calculo/criba", methods=['POST'])
 def obtener_lista():
     lista = request.get_json()['lista']
 

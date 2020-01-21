@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sa-logic
+  name: k8-python-api
   labels:
-    app: sa-logic
+    app: k8-python-api
 spec:
   selector:
      matchLabels:
-       app: sa-logic
+       app: k8-python-api
   replicas: 2
   minReadySeconds: 15
   strategy:
     type: RollingUpdate
-    rollingUpdate: 
+    rollingUpdate:
       maxUnavailable: 1
-      maxSurge: 1 
+      maxSurge: 1
   template:
     metadata:
       labels:
-        app: sa-logic
+        app: k8-python-api
     spec:
       containers:
-        - image: rinormaloku/sentiment-analysis-logic
+        - image: gcr.io/kubernetes-test-77617/remnant12/kubernetes-dist-api-bench-final
           imagePullPolicy: Always
-          name: sa-logic
+          name: k8-python-api
           ports:
             - containerPort: 5000
