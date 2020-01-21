@@ -90,6 +90,10 @@ La siguiente imagen muestra las imágenes de Docker dentro del "container regist
 
 La versión productiva del software se puede encontrar haciendo click en el siguiente [LINK](http://34.95.209.27:80)
 
+Una imagen del desmpeño del proyecto puede verse a continuación:
+
+![Image](/Imagenes/gcp.jpg "Proyecto en Google Cloud Plataform funcionando")
+
 ---
 
 8. **Pasos para desplegar desde cero**
