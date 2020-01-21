@@ -62,6 +62,8 @@ Para desarrollar este algoritmo se hizo del programa **PyCharm Community Version
 Para conectarse con la plataforma de Google Cloud se hizo uso de la herramienta [SDK](https://cloud.google.com/sdk/install) para utilizar la línea de comandos de Linux directamente.
 Finalmente para escribir el presente Readme, se hizo uso de **Visual Studio Code** con el plugin de _"Instant Markdown"_ para ver directamente los cambios en el texto. 
 
+---
+
 6. **Resultados**
 
 Los resultados se determinan como exitosos dado que se ha conseguido levantar correctamente las imágenes de Docker en la plataforma de Google Cloud. Utilizando Kubernetes se crearon _pods_ que mantienen en su interior dichas imágenes formando la estructura de la plataforma levantada, descrita en el punto anterior.
@@ -83,10 +85,13 @@ A continuación mostramos el despliegue de la plataforma dentro del sistema de G
 La siguiente imagen muestra las imágenes de Docker dentro del "container registry" de Google Cloud Plataform
 ![Image](/Imagenes/5.png "Imágenes de Docker dentro del repositorio de Google")
 
+---
 
 7. **Link de acceso a versión productiva del Software**
 
 La versión productiva del software se puede encontrar haciendo click en el siguiente [LINK](http://34.95.209.27:80)
+
+---
 
 8. **Pasos para desplegar desde cero**
 
