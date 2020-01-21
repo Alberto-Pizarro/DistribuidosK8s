@@ -72,15 +72,14 @@ Los resultados se determinan como exitosos dado que se ha conseguido levantar co
 
 Al momento de utilizar la plataforma, esta se ve como una página simple con un pequeño campo para ingresar el número con el que se va a trabajar. En el siguiente ejemplo se muestra utilizando un N=4000:
 
-![Image](/Imagenes/Localhost1.jpg "Ejemplo de funcionamiento con N=4000 de manera local")
+![Image](/Imagenes/Localhost1.png "Ejemplo de funcionamiento con N=4000 de manera local")
 
 Como se puede ver, el funcionamiento de la plataforma es bastante rápido por lo eficiente del algoritmo (a pesar de no ser un código óptimo ni el mejor algoritmo en lo que a eficiencia se trata).
 
 A continuación mostramos el despliegue de la plataforma dentro del sistema de Google Cloud, los comandos, el estado de los pods, etc.
-![Image](/Imagenes/1.png "Ejemplo de despliegue de la plataforma - parte 1")
-![Image](/Imagenes/2.png "Ejemplo de despliegue de la plataforma - parte 2")
-![Image](/Imagenes/3.png "Ejemplo de despliegue de la plataforma - parte 3")
-![Image](/Imagenes/4.png "Ejemplo de despliegue de la plataforma - parte 4")
+![Image](/Imagenes/1.png "Ejemplo de despliegue de la plataforma: listado de deployments - parte 1")
+![Image](/Imagenes/3.png "Ejemplo de despliegue de la plataforma: listado de servicios - parte 3")
+![Image](/Imagenes/4.png "Ejemplo de despliegue de la plataforma: listado de pods - parte 4")
 
 La siguiente imagen muestra las imágenes de Docker dentro del "container registry" de Google Cloud Plataform
 ![Image](/Imagenes/5.png "Imágenes de Docker dentro del repositorio de Google")
