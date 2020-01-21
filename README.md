@@ -68,7 +68,7 @@ Finalmente para escribir el presente Readme, se hizo uso de **Visual Studio Code
 
 Los resultados se determinan como exitosos dado que se ha conseguido levantar correctamente las imágenes de Docker en la plataforma de Google Cloud. Utilizando Kubernetes se crearon _pods_ que mantienen en su interior dichas imágenes formando la estructura de la plataforma levantada, descrita en el punto anterior.
 
-![Image](/Imagenes/Diagrama.gif "Diagrama de funcionamiento, extraído de: https://medium.com/free-code-camp/learn-kubernetes-in-under-3-hours-a-detailed-guide-to-orchestrating-containers-114ff420e882")
+![Image](/Imagenes/k8-primos-diagrama.png "Diagrama de despliegue de la plataforma en GCP utilizando Kubernetes")
 
 Al momento de utilizar la plataforma, esta se ve como una página simple con un pequeño campo para ingresar el número con el que se va a trabajar. En el siguiente ejemplo se muestra utilizando un N=4000:
 
